@@ -24,7 +24,8 @@ public class CorsConfig {
 
                         "http://localhost:5173",
 
-                        "https://booknest-frontend-umber.vercel.app "
+                        "https://booknest-frontend-silk.vercel.app"
+
                 )
         );
 
