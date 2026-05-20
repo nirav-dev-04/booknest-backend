@@ -17,25 +17,41 @@ public class CorsConfig {
         CorsConfiguration config =
                 new CorsConfiguration();
 
+        // ALLOWED FRONTEND URLS
+
         config.setAllowedOrigins(
                 List.of(
-                        "http://localhost:5173"
+
+                        "http://localhost:5173",
+
+                        "https://booknest-frontend.vercel.app"
                 )
         );
 
+        // ALLOWED METHODS
+
         config.setAllowedMethods(
                 List.of(
+
                         "GET",
+
                         "POST",
+
                         "PUT",
+
                         "DELETE",
+
                         "OPTIONS"
                 )
         );
 
+        // ALLOWED HEADERS
+
         config.setAllowedHeaders(
                 List.of("*")
         );
+
+        // ALLOW JWT / COOKIES
 
         config.setAllowCredentials(true);
 

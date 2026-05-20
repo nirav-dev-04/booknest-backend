@@ -134,7 +134,16 @@ public class SecurityConfig {
 
                                 "/orders/**"
 
-                        ).hasRole("USER")
+                        ).hasAnyRole("USER", "ADMIN")
+
+                        // =========================
+                        // OPTIONS REQUESTS
+                        // =========================
+
+                        .requestMatchers(
+                                HttpMethod.OPTIONS,
+                                "/**"
+                        ).permitAll()
 
                         // =========================
                         // ANY OTHER REQUEST
